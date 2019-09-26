@@ -1,16 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
+//Imports the card model
 const Cards = require('../models/card')
 
 router.get('/', (req, res, next) => {
     res.status(200).json({
         message: 'You reached the GET sets!'
     })
-})
-
-router.get('/imageTest', (req, res) => {
-    
 })
 
 router.post('/', (req, res, next) => {
