@@ -7,15 +7,17 @@ require('./api/db/mongoose');
 
 const port = process.env.PORT || 5000;
 
-
+//imports routes for express to use
 const cardRoutes = require('./api/routes/cards');
 const setRoutes = require('./api/routes/sets');
 
+//Additional configuration for express
 app.use(morgan('dev'));
 app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+//Sets header information for express
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', '*');
@@ -45,4 +47,5 @@ app.use((error, req, res, next) => {
     })
 })
 
+//Activates express
 app.listen(port);
