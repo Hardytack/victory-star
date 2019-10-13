@@ -60,7 +60,7 @@ router.get('/:cardID', async (req, res, next) => {
 router.patch('/:cardID', (req, res, next) => {
     const id = req.params.cardID;
     res.status(200).json({
-        message: 'Updated the card'
+        message: 'Selected card has been updated'
     })
 })
 
@@ -68,7 +68,7 @@ router.patch('/:cardID', (req, res, next) => {
 router.delete('/:cardID', (req, res, next) => {
     const id = req.params.cardID;
     res.status(200).send({
-        message: 'You deleted a card'
+        message: 'Selected card has been deleted'
     })
 })
 
