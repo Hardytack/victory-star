@@ -29,18 +29,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={this.state.img} className="App-logo" alt="logo" />
-          <img src={this.state.img2} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload this page.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn {this.state.name}
-          </a>
+          {this.state.name}
         </header>
       </div>
     );
